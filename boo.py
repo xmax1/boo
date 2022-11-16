@@ -33,7 +33,8 @@ with col1:
         "What does a ghost bring to the party?",
     )
     if boo:
-        if boo == 'boo' or boo == 'booze':
+        boo = boo.lower()[:3]
+        if boo == 'boo':
             st.session_state.v2 = "visible"
             st.session_state.d2 = False
         else:
@@ -48,7 +49,7 @@ with col2:
         label_visibility=st.session_state.v2,
         disabled=st.session_state.d2,
         placeholder=st.session_state.p2,
-    )
+    ).lower()
     if wrong:
         if wrong == 'wrong': 
             st.session_state.v3 = "visible"
@@ -62,7 +63,7 @@ with col3:
         label_visibility=st.session_state.v3,
         disabled=st.session_state.d3,
         placeholder=st.session_state.p3,
-    )
+    ).lower()
     hex = ''
     # hex = st.color_picker("or this", disabled=st.session_state.d3, label_visibility=st.session_state.v3)
     if cat or hex:
