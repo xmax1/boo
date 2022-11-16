@@ -49,8 +49,9 @@ with col2:
         label_visibility=st.session_state.v2,
         disabled=st.session_state.d2,
         placeholder=st.session_state.p2,
-    ).lower()
+    )
     if wrong:
+        wrong = wrong.lower()
         if wrong == 'wrong': 
             st.session_state.v3 = "visible"
             st.session_state.d3 = False
@@ -63,11 +64,11 @@ with col3:
         label_visibility=st.session_state.v3,
         disabled=st.session_state.d3,
         placeholder=st.session_state.p3,
-    ).lower()
-    hex = ''
+    )
     # hex = st.color_picker("or this", disabled=st.session_state.d3, label_visibility=st.session_state.v3)
-    if cat or hex:
-        if cat == 'black' or hex == '#000000':    
+    if cat:
+        cat = cat.lower()
+        if cat == 'black':    
             st.write('You win! Choose your prize: 1) kinder bueno 2) a book on irreverant philosophy 3) ~6h Max\'s time to build a weird ML project')
         else:
             reset()
