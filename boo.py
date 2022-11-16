@@ -59,7 +59,7 @@ with col2:
 
 with col3:
     cat = st.text_input(
-        "By Pauli exlusion, I really shouldn't be in the same room as this question. What is the answer?",
+        "By Pauli exlusion, Max really shouldn't be in the same room as this question. What is the answer?",
         label_visibility=st.session_state.v3,
         disabled=st.session_state.d3,
         placeholder=st.session_state.p3,
