@@ -13,7 +13,7 @@ if "visibility" not in st.session_state:
     st.session_state.d3 = True
 
 def reset():
-    sec = np.random.randint(1, 200)
+    sec = np.random.randint(1, 50)
     p = st.empty()
     p.text(f"You\'re a failure and nobody loves you. \n reloads in {sec} seconds :sad:...")
     st.session_state.v2 = "hidden"
